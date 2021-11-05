@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>You can make an R package too!</title>
+    <meta charset="utf-8" />
+    <meta name="author" content=" Emma Rand" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <link rel="stylesheet" href="style-xaringanthemer.css" type="text/css" />
+    <link rel="stylesheet" href="style-custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# You can make an R package too!
+## DDA: Data Science for Modern &amp; open Research
+### <br>Emma Rand
+### <br>🔗 <a href="http://bit.ly/pkg-dev-1">bit.ly/pkg-dev-1</a>
+
+---
+
+
+
+
+layout: true
+  
+&lt;div class="my-footer"&gt;
+&lt;span&gt;
+&lt;a href="http://bit.ly/pkg-dev-1" target="_blank"&gt;🔗 bit.ly/pkg-dev-1&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt; 
+
+&lt;!-- Presenting on zoom or similar? Press C to clone your slides, then P for presenter mode for one set. You can share the whole screen version of the slides while still seeing you presenter view --&gt;
+---
+
+## Welcome!
+
+.pull-left[
+
+&lt;img src="images/rforwards.png" width="40%" style="display: block; margin: auto;" /&gt;&lt;img src="images/transparent-cloud-only.PNG" width="40%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+Emma Rand  
+
+Senior Lecturer, Computational Biology  
+Department of Biology, University of York, UK 
+
+R Forwards
+
+Cloud-SPAN
+
+]
+
+
+
+---
+
+## Summary
+
+This workshop explains what a package is and why you might want to write one. 
+
+-  where packages come from
+-  where they live on your computer
+-  package states
+-  package components
+
+
+
+---
+
+class: middle, inverse
+
+# What questions do you have?
+
+---
+
+class: middle, inverse
+
+# Acknowledgements
+
+---
+
+Slides made with: **`knitr`** &lt;a name=cite-knitr1&gt;&lt;/a&gt;&lt;a name=cite-knitr2&gt;&lt;/a&gt;&lt;a name=cite-knitr3&gt;&lt;/a&gt;([Xie, 2020](#bib-knitr1); [Xie, 2015](#bib-knitr2); [Xie, 2014](#bib-knitr3)),**`R Markdown`** &lt;a name=cite-markdown1&gt;&lt;/a&gt;&lt;a name=cite-markdown2&gt;&lt;/a&gt;([Allaire Xie, et al., 2019](#bib-markdown1); [Xie Allaire, et al., 2018](#bib-markdown2)), **`xaringan`** &lt;a name=cite-xaringan&gt;&lt;/a&gt;([Xie, 2019](#bib-xaringan)), **`xaringanthemer`** &lt;a name=cite-xaringanthemer&gt;&lt;/a&gt;([Aden-Buie, 2020a](#bib-xaringanthemer)), **`xaringanExtra`** &lt;a name=cite-xaringanExtra&gt;&lt;/a&gt;([Aden-Buie, 2020c](#bib-xaringanExtra))
+
+Referencing with **`RefManageR`** &lt;a name=cite-McLean-2017&gt;&lt;/a&gt;([McLean, 2017](#bib-McLean-2017)).
+
+---
+
+## References
+
+.tiny[
+&lt;a name=bib-xaringanExtra&gt;&lt;/a&gt;[Aden-Buie,
+G.](#cite-xaringanExtra) (2020c). _xaringanExtra: Extras
+And Extensions for Xaringan Slides_. R package version
+0.2.3.9000. URL:
+[https://github.com/gadenbuie/xaringanExtra](https://github.com/gadenbuie/xaringanExtra).
+
+&lt;a name=bib-xaringanthemer&gt;&lt;/a&gt;[Aden-Buie,
+G.](#cite-xaringanthemer) (2020a). _xaringanthemer:
+Custom 'xaringan' CSS Themes_. R package version 0.3.0.
+URL:
+[https://CRAN.R-project.org/package=xaringanthemer](https://CRAN.R-project.org/package=xaringanthemer).
+
+&lt;a name=bib-markdown1&gt;&lt;/a&gt;[Allaire, J., Y. Xie, et
+al.](#cite-markdown1) (2019). _rmarkdown: Dynamic
+Documents for R_. R package version 1.16. URL:
+[https://github.com/rstudio/rmarkdown](https://github.com/rstudio/rmarkdown).
+
+&lt;a name=bib-McLean-2017&gt;&lt;/a&gt;[McLean, M.
+W.](#cite-McLean-2017) (2017). "RefManageR: Import and
+Manage BibTeX and BibLaTeX References in R". In: _The
+Journal of Open Source Software_. DOI:
+[10.21105/joss.00338](https://doi.org/10.21105%2Fjoss.00338).
+
+&lt;a name=bib-knitr3&gt;&lt;/a&gt;[Xie, Y.](#cite-knitr3) (2014).
+"knitr: A Comprehensive Tool for Reproducible Research in
+R". In: _Implementing Reproducible Computational
+Research_. Ed. by V. Stodden, F. Leisch and R. D. Peng.
+ISBN 978-1466561595. Chapman and Hall/CRC. URL:
+[http://www.crcpress.com/product/isbn/9781466561595](http://www.crcpress.com/product/isbn/9781466561595).
+
+&lt;a name=bib-knitr2&gt;&lt;/a&gt;[Xie, Y.](#cite-knitr2) (2015).
+_Dynamic Documents with R and knitr_. 2nd. ISBN
+978-1498716963. Boca Raton, Florida: Chapman and
+Hall/CRC. URL:
+[https://yihui.org/knitr/](https://yihui.org/knitr/).
+
+&lt;a name=bib-xaringan&gt;&lt;/a&gt;[Xie, Y.](#cite-xaringan)
+(2019). _xaringan: Presentation Ninja_. R package version
+0.12. URL:
+[https://CRAN.R-project.org/package=xaringan](https://CRAN.R-project.org/package=xaringan).
+
+&lt;a name=bib-knitr1&gt;&lt;/a&gt;[Xie, Y.](#cite-knitr1) (2020).
+_knitr: A General-Purpose Package for Dynamic Report
+Generation in R_. R package version 1.30. URL:
+[https://yihui.org/knitr/](https://yihui.org/knitr/).
+
+&lt;a name=bib-markdown2&gt;&lt;/a&gt;[Xie, Y., J. Allaire, et
+al.](#cite-markdown2) (2018). _R Markdown: The Definitive
+Guide_. ISBN 9781138359338. Boca Raton, Florida: Chapman
+and Hall/CRC. URL:
+[https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown).
+]
+
+
+---
+
+## License
+
+Licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLines": true,
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
