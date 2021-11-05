@@ -153,11 +153,19 @@ or maybe not....
 ---
 
 menti who are you
+scales about reporting
 
 
 ---
 
+---
 
+menti about feelings about data analysis
+
+
+---
+
+don't worry you are not alone
 ```{r echo = FALSE, out.width = "80%", fig.show='hold'}
 
 knitr::include_graphics("images/enjoy_2018.png")
@@ -165,6 +173,15 @@ knitr::include_graphics("images/enjoy_2018.png")
 
 ---
 
+```{r echo = FALSE, out.width = "20%", fig.show='hold'}
+
+knitr::include_graphics("images/james-long.png")
+```
+
+"Nobody wants to learn to code. They just want to kick ass."
+James Long
+rstudio::conf 2019
+Putting empathy in action Building a 'community of practice' for analytics in a global corporation. 
 
 ---
 
