@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>You can make an R package too!</title>
+    <title>📦 You can make an R package too!</title>
     <meta charset="utf-8" />
-    <meta name="author" content=" Emma Rand" />
+    <meta name="author" content="Emma Rand Department of Biology, University of York, UK" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
@@ -14,9 +14,9 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# You can make an R package too!
+# 📦 You can make an R package too!
 ## DDA: Data Science for Modern &amp; open Research
-### <br>Emma Rand
+### Emma Rand<br>Department of Biology, University of York, UK
 ### <br>🔗 <a href="https://bit.ly/3mma-dda">bit.ly/3mma-dda</a>
 
 ---
@@ -32,15 +32,68 @@ layout: true
 &lt;/span&gt;
 &lt;/div&gt; 
 
-&lt;!-- Presenting on zoom or similar? Press C to clone your slides, then P for presenter mode for one set. You can share the whole screen version of the slides while still seeing you presenter view --&gt;
+&lt;!-- Presenting on zoom or similar? Press C to clone your slides, then P for presenter mode for one set. You can share the whole screen version of the slides while still seeing your presenter view --&gt;
 
 ---
 
-## You can make an R package too!
+## I want to encourage...
 
 
-picture of upside funnel
+.pull-left[
+.center[
 
+.large[
+&amp;nbsp;
+]
+
+&amp;nbsp;
+
+.midi[
+
+R users to make packages
+
+]
+
+
+.small[
+
+why?  
+when?  
+how?  
+
+]
+
+]
+]
+
+--
+
+.pull-right[
+.center[
+.large[
+Use of scripting
+]
+
+People to use R
+
+.midi[
+
+R users to make packages
+
+]
+
+
+.small[
+
+why?  
+when?  
+how?  
+
+]
+
+]
+
+]
 ---
 class: middle, inverse
 
@@ -48,7 +101,7 @@ class: middle, inverse
 
 ---
 
-Go to https://www.menti.com/
+Go to https://www.menti.com/ and use the code 5900 8511
 
 &lt;img src="images/mentimeter_qr_code.png" width="48%" style="display: block; margin: auto;" /&gt;
 
@@ -58,7 +111,7 @@ Go to https://www.menti.com/
 
 Expectations of Stage 1 Biologists about Data Analysis.
 
-Responses to the question 'I will enjoy data analysis.'
+Responses to the question *"I will enjoy data analysis"*
 
 --
 
@@ -68,32 +121,41 @@ Responses to the question 'I will enjoy data analysis.'
 
 ## You are not alone!
 
-&lt;img src="images/james-long.png" width="20%" style="display: block; margin: auto;" /&gt;
 
 "*Nobody wants to learn to code. They just want to kick ass*."
+
+&lt;img src="images/james-long.png" width="20%" style="display: block; margin: auto;" /&gt;
 
 .small[
 James Long rstudio::conf 2019
 Putting empathy in action Building a 'community of practice' for analytics in a global corporation. 
 ]
+
 ---
 
 ## Me
 
 .pull-left[
 
-&lt;img src="images/rforwards.png" width="35%" style="display: block; margin: auto;" /&gt;&lt;img src="images/transparent-cloud-only.PNG" width="35%" style="display: block; margin: auto;" /&gt;
+Biologist  
+Data Analysis &amp; reproducibility  
+Training early career researchers  
+[Software Sustainability Institute](https://www.software.ac.uk/) Fellow  
+.small[*Good software practices to create better software, and that better software improves the reproducibility and reusability of research.*]
 ]
 
+--
+
 .pull-right[
-Emma Rand  
 
-Senior Lecturer, Computational Biology  
-Department of Biology, University of York, UK 
 
-[R Forwards](https://forwards.github.io/)
+[R Forwards](https://forwards.github.io/) 
+.small[The R Foundation's task force for widening participation in the R community, especially contributers.]
+&lt;img src="images/rforwards.png" width="15%" style="display: block; margin: auto;" /&gt;
 
-[Cloud-SPAN](https://cloud-span.york.ac.uk/)
+[Cloud-SPAN](https://cloud-span.york.ac.uk/) 
+.small[Trains researchers, and the research software engineers that support them, to run 'omics analyses on cloud-HPC.]
+&lt;img src="images/transparent-cloud-only.PNG" width="20%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -147,6 +209,13 @@ How the Turing Way (Arnold Bowler, et al., 2019) defines reproducible research
 
 ## Be nice to future you!
 
+&lt;img src="images/future_you.png" width="360px" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+## Be nice to future you!
+
 
 &lt;iframe src="https://giphy.com/embed/M11UVCRrc0LUk" width="480" height="277" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/M11UVCRrc0LUk"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
 
@@ -156,7 +225,7 @@ Five selfish reasons to work reproducibly (Markowetz, 2015a). Alternatively, see
 
 ---
 
-## Why script
+## Rationale for scripting analysis
 
 Science is the generation of ideas, designing work to test them and reporting the results.
 
@@ -173,7 +242,7 @@ Analysing and reporting them
 
 ## Rationale for scripting analysis
 
-We ensure replicability of laboratory and field work by planning and recording in lab books and using standard protocols. 
+We ensure **replicability** of laboratory and field work by planning and recording in lab books and using standard protocols. 
 
 
 &lt;img src="images/rationale2.png" width="600px" style="display: block; margin: auto;" /&gt;
@@ -183,12 +252,12 @@ Even so replicating results can be hard.
 
 ## Rationale for scripting analysis
 
-We ensure reproducibility of laboratory and field work by planning and recording in lab books and using standard protocols. 
+We ensure **replicability** of laboratory and field work by planning and recording in lab books and using standard protocols.  
 
 &lt;img src="images/rationale3.png" width="600px" style="display: block; margin: auto;" /&gt;
 
 
-Workflows for data analysis and reporting can, and should, be 100% reproducible! Scripting is the way to achieve this.
+Workflows for data analysis and reporting can, and should, be 100% **reproducible**! Scripting is a way to achieve this.
 
 ---
 
@@ -196,7 +265,7 @@ Workflows for data analysis and reporting can, and should, be 100% reproducible!
 
 That reproducibility applies to all aspects of the data workflow.
 
-&lt;img src="images/rationale5.png" width="700px" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/rationale5.png" width="800px" style="display: block; margin: auto;" /&gt;
 
 --
 
@@ -216,6 +285,24 @@ class: middle, inverse
 Open source and free
 
 --
+
+-  leverages all willing expertise
+
+-  problems are solved quickly
+
+-  innovations appear often and quickly
+
+-  fosters collaboration and community
+
+-  abundant support
+
+---
+
+## Why R?
+
+Open source and free
+
+--
  .......But so is Python
   
 --
@@ -223,8 +310,14 @@ Open source and free
 R has reputation for catering to users who do not see themselves as programmers, and allowing them to slide gradually into programming.
 
 
-&lt;img src="images/biologist1.png" width="600px" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/biologist1.png" width="700px" style="display: block; margin: auto;" /&gt;
 
+
+---
+
+## Why R?
+
+Domain specific
 
 --
 
@@ -234,24 +327,21 @@ Designed for data analysis and graphics - which means it is often easier to achi
 
 ## Why R?
 
-The R community is one of R's greatest assets. VGibrant, supportive, inclusive.
+The R community is one of R's greatest assets. Vibrant, supportive, inclusive.
 
 .pull-left[
 * [#rstats](https://twitter.com/hashtag/rstats?lang=en) on twitter is very active
 * [RForwards](https://forwards.github.io/about/) 
 * [RLadies](https://rladies.org/) gender diversity promotion 
 * [Hey! You there! You are welcome here](https://ropensci.org/blog/2017/06/23/community/)  
-
+.footnote[
+Artwork by @allison_horst 
+]
 ]
 
 .pull-right[
 &lt;img src="images/welcome_to_rstats_twitter.png" width="400px" style="display: block; margin: auto;" /&gt;
 
-.tiny[
-.footnote[
-Artwork by @allison_horst 
-]
-]
 ]
 
 ---
@@ -266,8 +356,11 @@ class: middle, inverse
 Conventionally:
 
 -  Package developers  
+
 -  Generalisable analytical methods  
+
 -  For use on other data  
+
 -  Public release
 
 
@@ -277,11 +370,52 @@ Conventionally:
 
 Package up your data analysis project!
 
--  If you are already trying to work reproducibly you almost doing it anyway!
+-  You don't need to have a collection of highly generalisation functions
 
--  It will help you do it better
+-  You don't need to share it with anyone else
 
--  If you are trying to work reproducibly, making a package is just a short step beyond that
+-  If you are already trying to work reproducibly you are almost doing it anyway!
+
+-  But it will help you do it better
+
+
+---
+
+## Why make a package?
+
+If you are already trying to work reproducibly you are almost doing it anyway!
+
+```
+/stem-cell-proteomic
+   /data-raw
+   /date-processed
+   /figures
+   /R
+   README.md
+   report.Rmd
+   stem-cell-proteomic.RProj
+
+```
+… making a package is just a short step beyond that
+
+
+---
+
+## I don't do *any* coding...
+
+
+..and I'm not about to start!
+
+--
+
+You can still make steps towards reproducibility
+
+-  organise your data (Wickham, 2014; Broman and Woo, 2018)
+-  describe your data with metadata
+-  have a data management plan e.g. [UK Data Service Checklist](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/checklist/)
+-  have a consistent directory structure
+-  have a consistent naming system e.g see Jenny Bryan's [Naming things](http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf)
+-  Have a look at [Reproducible Research in R](https://r-cubed.rostools.org/index.html)
 
 
 ---
@@ -377,7 +511,11 @@ class: middle, inverse
 
 ## Summary
 
--  You are nearly doing it anyway  
+-  Few biologists want to learn to code  
+-  We do want our work to reproduce  
+-  We can take steps towards reproducibility  
+-  R is cool!
+-  If you are an R user, you can make a package  
 -  Encourages and supports reproducibility  
 -  Helps you document your analysis  
 -  Helps you test and check your analysis  
@@ -439,6 +577,9 @@ Bollen, K., J. T. Cacioppo, et al. (2015). _Social,
 Behavioral, and Economic Sciences Perspectives on Robust
 and Reliable Science_. National Science Foundation.
 
+Broman, K. W. and K. H. Woo (2018). "Data Organization in
+Spreadsheets". In: _Am. Stat._ 72.1, pp. 2-10.
+
 Markowetz, F. (2015a). "Five selfish reasons to work
 reproducibly". En. In: _Genome Biol._ 16, p. 274.
 
@@ -446,10 +587,6 @@ McLean, M. W. (2017). "RefManageR: Import and Manage
 BibTeX and BibLaTeX References in R". In: _The Journal of
 Open Source Software_. DOI:
 [10.21105/joss.00338](https://doi.org/10.21105%2Fjoss.00338).
-
-National Academies of Sciences, Engineering, Medicine, et
-al. (2019). _Understanding Reproducibility and
-Replicability_. National Academies Press (US).
 ]
 
 ---
@@ -457,9 +594,19 @@ Replicability_. National Academies Press (US).
 ## References
 
 .tiny[
+National Academies of Sciences, Engineering, Medicine, et
+al. (2019). _Understanding Reproducibility and
+Replicability_. National Academies Press (US).
+
 OECD Global Science Forum (2020). _Building digital
 workforce capacity and skills for data-intensive
 science_. OECD.
+
+Wickham, H. (2014). "Tidy Data". In: _Journal of
+Statistical Software_ 59.10, p. 1â€“23. DOI:
+[10.18637/jss.v059.i10](https://doi.org/10.18637%2Fjss.v059.i10).
+URL:
+[https://www.jstatsoft.org/index.php/jss/article/view/v059i10](https://www.jstatsoft.org/index.php/jss/article/view/v059i10).
 
 Xie, Y. (2014). "knitr: A Comprehensive Tool for
 Reproducible Research in R". In: _Implementing
