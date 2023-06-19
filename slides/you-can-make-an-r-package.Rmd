@@ -185,7 +185,7 @@ class: middle, inverse
 
 ---
 
-Go to https://www.menti.com/ and use the code 5900 8511
+Go to https://www.menti.com/ and 8332 4753
 
 ```{r echo = FALSE, out.width = "48%"}
 knitr::include_graphics("images/mentimeter_qr_code.png")
@@ -293,8 +293,10 @@ How the Turing Way `r Cite(myBib, "the_turing_way_community_2019_3233986")` defi
 
 
 
-* **Will** become standard in Science and publishing e.g OECD Global Science Forum Building digital workforce capacity and skills for data-intensive science `r Cite(myBib, "OECD_Global_Science_Forum2020-cp")`
+* **Will** become standard in Science and publishing e.g OECD Global Science Forum Building digital workforce capacity and skills for data-intensive science `r Cite(myBib, c("OECD_Global_Science_Forum2020-cp", "SITCReproducibilityResearchIntegrity2023"))`
 
+"Review of Research Excellence Framework assessment criteria [should ensure] that transparency is a prerequisite
+of top-scoring research [and] consider the effects of removing ‘originality’ from the top score bracket"
 ---
 
 ## It's science!
@@ -525,7 +527,8 @@ You can still make steps towards reproducibility
 -  have a data management plan e.g. [UK Data Service Checklist](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/checklist/)
 -  have a consistent directory structure
 -  have a consistent naming system e.g see Jenny Bryan's [Naming things](http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf)
--  Have a look at [Reproducible Research in R](https://r-cubed.rostools.org/index.html)
+-  [Open Research Skills Framework: a Practical Guide](https://subjectguides.york.ac.uk/openresearch)
+
 
 
 ---
